@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const app = express();
+const app = express;
 
 const routes = require('./src/routes/registro.routes');
  mongoose.connect('mongodb://127.0.0.1:27017/test');
@@ -16,3 +16,4 @@ app.use('/', routes);
 app.listen(3000, ()=> {
     console.log('Meu servidor está funcionando');
 });
+
